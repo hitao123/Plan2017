@@ -45,19 +45,19 @@ root
 > 设置表单的样式
 
 #### bootstrap.less
-> `import` 上面几种样式，通过 less 打包成 bootstrap.css 
+> `import` 上面几种样式，通过 less 按序合并打包成 bootstrap.css 
 
 #### 版本增加内容
-```
-  1. v1.2.0 增加响应式设计 adaptive.less `@media only screen and (max-width: 480px) { // 当宽度窄与480px 这里的样式会生效， 也就是在移动端显示的时候 }`
-  2. v1.3.0 preboot.less 分解为 variables.less  mixins.less 以及支持IE7 一些hack写法 `*border-collapse`, adaptive.less remove
-  3. v1.4.0 增加js 如 button.js alert.js modal.js 等，这个时候就有单元测试了！好厉害
-  4. v2.0.0 增加雪碧图用于`icon`, 这个时候的less在less文件夹下而不是在lib下，很庞大了，如 popover.less 从 pattern.less 抽出来成为单独的样式，less 文件细分， 轮播、导航、面包屑、进度条、media responsive 被添加进来
-  5. v2.0.2 badge 被添加进来
-  6. v2.2.2 package.json 被添加进来 .travis.yml 也被添加进来， 时间是在2012年12月9日，node版本使用的是 v0.6 
-  7. v2.3.2 这个版本没什么大的变化
-  上面是没有看CHANGELOG 自己的认识， 更加详细的参见 `CHANGELOG.MD`, 以后最好先看一遍CHANGELOG，对着CHANGELOG在做分析。
-```
+
+> 1. v1.2.0 增加响应式设计 adaptive.less `@media only screen and (max-width: 480px) { // 当宽度窄与480px 这里的样式会生效， 也就是在移动端显示的时候 }`
+>  2. v1.3.0 preboot.less 分解为 variables.less  mixins.less 以及支持IE7 一些hack写法 `*border-collapse`, adaptive.less remove
+>  3. v1.4.0 增加js 如 button.js alert.js modal.js 等，这个时候就有单元测试了！好厉害
+>  4. v2.0.0 增加雪碧图用于`icon`, 这个时候的less在less文件夹下而不是在lib下，很庞大了，如 popover.less 从 pattern.less 抽出来成为单独的样式，less 文件细分， 轮播、导航、面包屑、进度条、media responsive 被添加进来
+>  5. v2.0.2 badge 被添加进来
+>  6. v2.2.2 package.json 被添加进来 .travis.yml 也被添加进来， 时间是在2012年12月9日，node版本使用的是 v0.6 
+>  7. v2.3.2 这个版本没什么大的变化，上面是没有看CHANGELOG 自己的认识， 更加详细的参见 `CHANGELOG.MD`, 以后最好先看一遍CHANGELOG，对着CHANGELOG在做分析。
+>  8. v3.0.0 这一版本没有`CHANGELOG.MD`， 这一版可以说是革命性的，引入 `grunt` 工程化，`package.json`依赖增加， `.editorconfig`, 团队合作代码样式统一， 引入`@font-face`, 去除雪碧图方式， Blog 使用 jkelly 模板方式重写，这里开始就是我们比较熟悉的方式了，通过`Grunt` 构建工具将所有less，js 打包成相应的**dist** 目录下， 添加一些对`bootstrap.css bootstrap-theme.css` 和 `bootstrap.js`,
+>  9. v4.0.0-beta 这一版本将less 方式改为 Sass，`@font-face` 去除了， 构建工具依旧还是`Grunt`, 最熟悉的还是v3.X.X, 可以说这一版是最经典了。
 
 ## 二、阅读Lodash/Underscore.js(FP)
 > 时间 9.1-9.30
