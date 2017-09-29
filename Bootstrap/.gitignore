@@ -1,0 +1,6 @@
+*.err
+*.log
+.cache
+.DS_Store
+bower_components
+node_modules
